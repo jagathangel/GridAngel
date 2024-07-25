@@ -1,0 +1,197 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar footer footer footer footer";
+  transition: all 0.3s linear !important;
+}
+.main-content {
+  grid-area: header;
+  height: 100%;
+}
+.sidebar {
+  transition: all 0.3s linear !important;
+  grid-area: sidebar;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5e5e5;
+  padding: 20px 20px;
+}
+
+.sidebar .sidebar-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+.sidebar .sidebar-items .logo {
+  margin: 20px 0px;
+  border-bottom: 2px solid #ffffff;
+  padding: 20px 0px;
+}
+.sidebar .sidebar-items .logo a {
+  text-align: center;
+  font-size: 30px;
+  color: #242f40;
+}
+.sidebar .sidebar-items .logo a:hover {
+  color: #cca43b;
+  background-color: #e5e5e5;
+}
+.sidebar .sidebar-items a i {
+  padding: 0px 10px;
+}
+.sidebar .sidebar-items a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px 20px;
+  color: #242f40;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+.sidebar .sidebar-items a:hover {
+  background-color: #ffffff;
+  color: #cca43b;
+}
+.sidebar .sidebar-footer-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid #ffffff;
+  padding: 20px 0px 0px 0px;
+}
+.sidebar .sidebar-footer-items a i {
+  padding: 0px 10px;
+}
+.sidebar .sidebar-footer-items a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px 20px;
+  color: #242f40;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar .sidebar-footer-items a:hover {
+  background-color: #ffffff;
+  color: #cca43b;
+}
+/* Main Content */
+.main-content .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.main-content .content form input {
+  padding: 10px 14px;
+  border: none;
+  outline: 1px solid #242f40;
+}
+.main-content .content form input:focus {
+  outline: 1px solid #cca43b;
+}
+.main-content .content form input:focus button {
+  outline: 1px solid #cca43b;
+}
+.main-content .menu-btn i {
+  font-size: 56px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-content .content form button {
+  padding: 10px 14px;
+  border: none;
+  outline: 1px solid #242f40;
+}
+.contents h2 i {
+  padding: 0px 6px;
+}
+.contents h2 {
+  font-weight: bold;
+  color: #242f40;
+  cursor: pointer;
+}
+.contents h2:hover {
+  color: #cca43b;
+}
+/* Main Content End*/
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cards .card {
+  margin: 20px 20px;
+}
+/* Cards End */
+/* coursoul */
+.coursoul {
+  padding: 20px 20px;
+}
+
+.coursoul .carousel-item img {
+  height: 500px;
+  border-radius: 10px;
+}
+/* coursoul End */
+/* Footer */
+.footer {
+  grid-area: footer;
+  transition: all 0.3s linear !important;
+}
+/* Footer End */
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "sidebar header header header header"
+      "sidebar footer footer footer footer";
+  }
+  .sidebar .sidebar-footer-items span {
+    display: none;
+  }
+  .sidebar .sidebar-items span {
+    display: none;
+  }
+  .sidebar .sidebar-footer-items a {
+    padding: 20px 0px;
+  }
+  .sidebar .sidebar-items,
+  .sidebar-footer-items {
+    text-align: center;
+  }
+  .sidebar .sidebar-items a {
+    padding: 10px 0px;
+  }
+  .header form {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) {
+  .sidebar {
+    display: flex;
+  }
+  .header form input {
+    width: 80% !important;
+  }
+}
